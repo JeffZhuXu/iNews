@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/logHandle/!svn/ver/33/iNews/src/com/yisinian/iNews/tools
+END
+FindAllIndex.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/logHandle/!svn/ver/29/iNews/src/com/yisinian/iNews/tools/FindAllIndex.java
+END
+NewThread.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/logHandle/!svn/ver/29/iNews/src/com/yisinian/iNews/tools/NewThread.java
+END
+NowDateOrTime.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/logHandle/!svn/ver/29/iNews/src/com/yisinian/iNews/tools/NowDateOrTime.java
+END
+CollectNews.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/logHandle/!svn/ver/29/iNews/src/com/yisinian/iNews/tools/CollectNews.java
+END
+ReadHtmlFiles.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/logHandle/!svn/ver/33/iNews/src/com/yisinian/iNews/tools/ReadHtmlFiles.java
+END
+FindAllSchools.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/logHandle/!svn/ver/29/iNews/src/com/yisinian/iNews/tools/FindAllSchools.java
+END
+FindNewsFileNameByTime.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/logHandle/!svn/ver/29/iNews/src/com/yisinian/iNews/tools/FindNewsFileNameByTime.java
+END
+ResultsSort.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/logHandle/!svn/ver/29/iNews/src/com/yisinian/iNews/tools/ResultsSort.java
+END
+UploadFileToHDFS.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/logHandle/!svn/ver/29/iNews/src/com/yisinian/iNews/tools/UploadFileToHDFS.java
+END
+testFindFilesByTime.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/logHandle/!svn/ver/29/iNews/src/com/yisinian/iNews/tools/testFindFilesByTime.java
+END
+FindSearchIndex.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/logHandle/!svn/ver/29/iNews/src/com/yisinian/iNews/tools/FindSearchIndex.java
+END
+SaveTxt.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/logHandle/!svn/ver/29/iNews/src/com/yisinian/iNews/tools/SaveTxt.java
+END

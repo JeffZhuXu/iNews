@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Fri Jan 15 12:50:36 CST 2016
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=true
+jarname=C\:\\Users\\Atlas\\Desktop\\CatchScienceWebsite.jar
+manifest.mergeall=true
+manifest.mainclass=catchnews.work.CatchWebSiteNews
+manifest.file=<createnew>
+jarname.isextern=true
+onejar.expand=
+excludes=<jar|junit-4.11.jar>;<jar|spring-beans-3.2.3.RELEASE.jar>;<jar|spring-core-3.2.3.RELEASE.jar>;<jar|spring-jdbc-3.2.3.RELEASE.jar>;<jar|spring-tx-3.2.3.RELEASE.jar>;<jar|hadoop-capacity-scheduler-1.2.1.jar>;<jar|hadoop-fairscheduler-1.2.1.jar>;<jar|hadoop-thriftfs-1.2.1.jar>;<jar|hsqldb-1.8.0.10.jar>;<jar|jackson-core-asl-1.8.8.jar>;<jar|jackson-mapper-asl-1.8.8.jar>;<jar|jasper-compiler-5.5.12.jar>;<jar|jasper-runtime-5.5.12.jar>;<jar|jdeb-0.8.jar>;<jar|jersey-core-1.8.jar>;<jar|jersey-json-1.8.jar>;<jar|jersey-server-1.8.jar>;<jar|jets3t-0.6.1.jar>;<jar|jetty-6.1.26.jar>;<jar|jetty-util-6.1.26.jar>;<jar|jsch-0.1.42.jar>;<jar|junit-4.5.jar>;<jar|kfs-0.2.2.jar>;<jar|mockito-all-1.8.5.jar>;<jar|oro-2.0.8.jar>;<jar|servlet-api-2.5-20081211.jar>;<jar|xmlenc-0.52.jar>;<jar|hadoop-ant-1.2.1.jar>;<jar|hadoop-client-1.2.1.jar>;<jar|hadoop-core-1.2.1.jar>;<jar|hadoop-examples-1.2.1.jar>;<jar|hadoop-minicluster-1.2.1.jar>;<jar|hadoop-test-1.2.1.jar>;<jar|hadoop-tools-1.2.1.jar>
+includes=

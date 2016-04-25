@@ -1,0 +1,177 @@
+package catchnews.tools;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+import catchnews.tools.code.WebsiteName;
+import cn.edu.hfut.dmic.contentextractor.ContentExtractor;
+
+/*
+ * 朱旭
+ * 2015.8.7
+ * 从给定的html网页的源代码中找出所需要的东西
+ * */
+public class Catch {
+	
+	
+	//抓取网页的源代码,参数为网址
+	 public static String GetPage(String url) throws IOException { 
+		 Document doc = Jsoup.connect(url).get(); 
+		 return doc.html();
+	    }
+	
+		//抓取自定义title
+	 public static String GetMyTitle(String content) throws IOException { 
+			//用于存放找到的结果
+			int num =0;
+			List<String> result = new ArrayList<String>();
+			Matcher matcher = Pattern.compile("(?<=([^\"](itle|ITLE).{1,3}>))[\\s\\S]{1,50}(?=</)").matcher(content);
+
+			while(matcher.find()){	
+				result.add(matcher.group());
+				num=num+1;
+			}  
+			//没找到信息的话
+			if(num==0){
+				result.add("没匹配内容");
+			}
+			return result.get(0);
+	    }
+	
+	//自己写的正则表达式
+	public static List<String> getInformationFromContent(String content,String limit){
+
+		
+		//用于存放找到的结果
+		int num =0;
+		List<String> result = new ArrayList<String>();
+		Matcher matcher = Pattern.compile(limit).matcher(content);
+
+		while(matcher.find()){	
+			result.add(matcher.group());
+			num=num+1;
+		}  
+		//没找到信息的话
+		if(num==0){
+			result.add("没匹配内容");
+		}
+		
+		return result;
+		
+	
+	}
+	//抓取图片部分
+	public static List<String> getImageAsString(String body)
+	throws PatternSyntaxException {
+		List<String> temp2 = new ArrayList<String>();
+
+		Pattern pattern = Pattern.compile(
+		"(?<= src=\")[\\s\\S]{0,80}(?=(\"\\s[abpw])|(\"\\s/>)|(\"/>))", Pattern.DOTALL);
+		Matcher matcher = pattern.matcher(body);
+		while (matcher.find()) {
+			temp2.add(matcher.group());
+		}
+		if (temp2.size() < 1)
+			temp2.add("0");
+		return temp2;
+	}
+	//抓取标题部分
+	public  static String getTitleAsString(String body) throws PatternSyntaxException {
+		String time = "标题抓取失败";
+		StringBuffer temp1 = new StringBuffer();
+
+		Pattern pattern = Pattern
+				.compile(
+						"(?<=<title>)[\\s\\S]*?(?=</title>)",
+						Pattern.DOTALL);
+		Matcher matcher = pattern.matcher(body);
+		// 考虑到有些特殊标题无法用此方法捕获，例如867,848，此种情况捕获为空，则返回初始化的字符串，后台需手动更改
+		while (matcher.find()) {
+			temp1.append(matcher.group());
+		
+		}
+		if (temp1.toString().length() > 1) {
+			time = temp1.toString();
+		}
+
+		return time;
+	}
+	
+	//抓取新闻标题,通过比对三种方法抓到的title，从中选最优的
+	public static String getBestTitleAsString(Document doc) throws Exception{
+		
+		List<String> title= new ArrayList<String>();
+		title.add(doc.title()); //doc文件中内置的title
+		title.add(ContentExtractor.getNewsByDoc(doc).getTitle()); //通过webcolector的新闻标题抓取程序抓到的标题
+		Matcher matcher = Pattern.compile("(?<=([^\"]itle.{1,3}>))[\\s\\S]{1,50}(?=</)").matcher(doc.html().toString());
+		
+		int sum=0;
+		//通过自己写的函数来抓取标题
+		while(matcher.find()){	
+			//将匹配到的正文出去前面和后面的空格和换行符
+			title.add(matcher.group().trim());
+			sum=sum+1;
+		}  
+		//自己的方法没有找到title
+		if(sum==0){
+			
+			//当这两个方法都没抓到的时候
+			if((title.get(0).length()==0)&&(title.get(1).length()==0)){
+			return "标题获取失败";	
+			}else if((title.get(0).length()<title.get(1).length())){
+				return title.get(1);
+			}else{
+				return title.get(0);
+			}
+		}else{      //自己的方法也抓到的时候，那么抓到的就是正确的，返回自己抓到的title
+			return title.get(2);
+		}
+		}
+		
+		
+	//找出这条新闻中，相关的学校名称，返回的结果就是相关学校名称的一个list
+	public static List<String> getRelativeSchools(String content){
+
+		
+		//用于存放找到的结果
+		int num =0;
+		List<String> result = new ArrayList<String>();
+		
+		//学校的名称集合
+		List<String> schools=WebsiteName.schoolNames;
+		
+		for(int i=0;i<schools.size();i++){
+			
+			Matcher matcher = Pattern.compile(schools.get(i)).matcher(content);
+
+			while(matcher.find()){	
+				result.add(schools.get(i));
+				num=num+1;
+				break;
+			}  
+			
+		}
+
+		//没找到信息的话
+		if(num==0){
+			result.add("0");
+		}
+		
+		return result;
+		
+	
+	}
+	
+
+}

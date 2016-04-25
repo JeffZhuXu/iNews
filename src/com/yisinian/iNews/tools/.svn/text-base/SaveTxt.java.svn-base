@@ -1,0 +1,37 @@
+package com.yisinian.iNews.tools;
+
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import org.apache.hadoop.fs.FSDataInputStream;
+
+public class SaveTxt {
+
+	/**将字符串保存为TxT格式文件
+	 * 朱旭
+	 * 2015.7.27
+	 * 参数：
+	 * text:正文内容
+	 * filename：要保存的文件名称以及路径
+	 * fileFormate：要保存的文件格式，txt或者是html
+	 * formate：文字编码格式：GBK或者是UT8，Ubuntu系统默认的是UTF8
+	 */
+	public static void saveToHtmlFile(String text,String filename,String formate){
+		
+		String processedStr = text;
+
+		try{
+
+		Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(filename), formate));
+		//GBK为将字符串保存为制定的汉字编码格式，统一改为UTF-8																									
+		 out.write(processedStr);
+		 out.close();
+		}catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+
+}

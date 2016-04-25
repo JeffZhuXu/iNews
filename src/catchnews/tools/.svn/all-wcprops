@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/logHandle/!svn/ver/29/iNews/src/catchnews/tools
+END
+AddCharset.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/logHandle/!svn/ver/29/iNews/src/catchnews/tools/AddCharset.java
+END
+FindMaxId.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/logHandle/!svn/ver/29/iNews/src/catchnews/tools/FindMaxId.java
+END
+CatchHtml.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/logHandle/!svn/ver/29/iNews/src/catchnews/tools/CatchHtml.java
+END
+SelectNumberAndWord.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/logHandle/!svn/ver/29/iNews/src/catchnews/tools/SelectNumberAndWord.java
+END
+SelectDate.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/logHandle/!svn/ver/29/iNews/src/catchnews/tools/SelectDate.java
+END
+SelectChinese.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/logHandle/!svn/ver/29/iNews/src/catchnews/tools/SelectChinese.java
+END
+Select.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/logHandle/!svn/ver/29/iNews/src/catchnews/tools/Select.java
+END
+CatchPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/logHandle/!svn/ver/29/iNews/src/catchnews/tools/CatchPage.java
+END
+Catch.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/logHandle/!svn/ver/29/iNews/src/catchnews/tools/Catch.java
+END
+SaveHtml.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/logHandle/!svn/ver/29/iNews/src/catchnews/tools/SaveHtml.java
+END
+CatchTitle.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/logHandle/!svn/ver/29/iNews/src/catchnews/tools/CatchTitle.java
+END
+CatchImage.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/logHandle/!svn/ver/29/iNews/src/catchnews/tools/CatchImage.java
+END
+AddTitleAndCharset.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/logHandle/!svn/ver/29/iNews/src/catchnews/tools/AddTitleAndCharset.java
+END
+StorageToSql.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/logHandle/!svn/ver/29/iNews/src/catchnews/tools/StorageToSql.java
+END
+SelectNumber.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/logHandle/!svn/ver/29/iNews/src/catchnews/tools/SelectNumber.java
+END
+Add.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/logHandle/!svn/ver/29/iNews/src/catchnews/tools/Add.java
+END
+HttpConnectionUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/logHandle/!svn/ver/29/iNews/src/catchnews/tools/HttpConnectionUtil.java
+END
